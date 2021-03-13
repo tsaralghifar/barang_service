@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Unit;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,5 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('/units', Unit::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
