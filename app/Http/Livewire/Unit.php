@@ -10,8 +10,8 @@ class Unit extends Component
     public function render()
     {
         $units = UnitModel::orderBy('created_at', 'DESC')->get();
-        return view('livewire.unit', [
+        return view('livewire.unit.index', [
             'units' => $units
-        ]);
+        ])->extends('layouts.admin_layout');
     }
 }
