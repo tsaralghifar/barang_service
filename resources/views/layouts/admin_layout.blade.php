@@ -9,7 +9,6 @@
         <title>Static Navigation - SB Admin</title>
         <link href="{{asset('css/dashboard.css')}}" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
-        @livewireStyles
     </head>
     <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -90,10 +89,8 @@
             </div>
             <div id="layoutSidenav_content">
 
-                @yield('contents')
-                <div class="container-fluid">
-                    {{isset($slot) ? $slot : null }}
-                </div>
+                @yield('content')
+                
 
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
@@ -112,6 +109,5 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="{{asset('js/dashboard.js')}}"></script>
-        @livewireScripts
     </body>
 </html>
